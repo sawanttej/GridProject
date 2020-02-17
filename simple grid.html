@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple grid</title>
+
+    <style>
+        .grid-container {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr 3fr);
+            grid-gap: 1em;
+            grid-auto-rows: minimal(100px, auto);
+            justify-content: stretch;
+            align-items: stretch;
+        }
+
+
+
+
+        .grid-container>div {
+
+            padding: 1em;
+            background: rgb(139, 51, 51);
+        }
+
+        .grid-container>div:nth-child(even) {
+
+            background: coral;
+        }
+
+        #div1 {
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div id="div1">simple grid. 1</div>
+        <div>simple grid. 2</div>
+        <div>simple grid. 3</div>
+        <div>simple grid. 4</div>
+        <div>simple grid. 5</div>
+    </div>
+</body>
+
+</html>
